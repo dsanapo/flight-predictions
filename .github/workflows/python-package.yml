@@ -37,6 +37,6 @@ jobs:
     - name: Ensure no common security issues are present
       run: |
         bandit function-scorer/src/* --skip B311
-    # - name: Test with pytest
-    #   run: |
-    #     pytest function-scorer/
+    - name: Test with pytest
+      run: |
+        pytest function-scorer/
