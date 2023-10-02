@@ -1,19 +1,14 @@
-name: Flight Prediction
-
+name: Build Gateway Function
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
 permissions:
   contents: read
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.8

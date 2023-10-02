@@ -1,4 +1,4 @@
-name: Deploying Gateway Function to AWS
+name: Deploy Gateway Function to AWS
 on:
   push:
     branches:
