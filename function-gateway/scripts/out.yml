@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Gateway function to score the ML model.
+Resources:
+  function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: gateway.lambda_handler
+      Runtime: python3.8
+      CodeUri: s3://lambda-artifacts-a2fae311c489de20/0db6bb27bcb2033ea4b5e9ff45754da4
+      Description: Call the AWS Lambda API
+      Timeout: 10
+      Policies:
+      - AWSLambdaBasicExecutionRole
+      - AWSXrayWriteOnlyAccess
+      Tracing: Active
+      Layers:
+      - Ref: libs
+  libs:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: gateway-deps
+      Description: Dependencies for the sample app.
+      ContentUri: s3://lambda-artifacts-a2fae311c489de20/a2dd323306f1d36bdf024e8c1c2af2b9
+      CompatibleRuntimes:
+      - python3.8

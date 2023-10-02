@@ -284,3 +284,5 @@ poetry.toml
 pyrightconfig.json
 .idea
 .python-version
+
+*/package

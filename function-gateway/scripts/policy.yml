@@ -1,0 +1,12 @@
+Type: AWS:IAM:Policy
+Properties:
+  PolicyName: "AllowTargetScorer"
+  PolicyDocument:
+    Version: 2012-10-17
+    Statement:
+      - Sid: Statement1
+        Effect: Allow
+        Action:
+          - lambda:InvokeFunction
+          - lambda:InvokeAsync
+        Resource: arn:aws:lambda:us-east-1:819883234898:function:ml-scorer-function-8DxH1AHeW5x1
