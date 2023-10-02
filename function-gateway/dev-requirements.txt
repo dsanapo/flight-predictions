@@ -1,0 +1,4 @@
+flake8==6.1.0
+mypy==1.5.1
+bandit==1.7.5
+pytest==7.4.2
