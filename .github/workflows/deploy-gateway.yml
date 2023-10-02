@@ -1,10 +1,10 @@
-name: Deploying multiple Lambdas
+name: Deploying Gateway Function to AWS
 on:
   push:
     branches:
       - main
 jobs:
-  lambda1:
+  gateway:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
