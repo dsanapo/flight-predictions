@@ -14,6 +14,11 @@ client = boto3.client('lambda')
 
 
 def lambda_handler(event, context):
+    phase = os.environ['PHASE']
+    scoring_service = os.environ['SCORING_LAMBDA']
+    logger.info(f"Phase: {phase}")
+    logger.info(f"Scoring Service ARN: {scoring_service}")
+
     logger.debug('## ENV VARIABLES' + jsonpickle.encode(dict(**os.environ)))
     logger.debug('## EVENT' + jsonpickle.encode(event))
     logger.debug('## CONTEXT' + jsonpickle.encode(context))
@@ -21,9 +26,8 @@ def lambda_handler(event, context):
     input_flight = flight.create_from_request(event)
     logger.info(f"Parsed flight: {input_flight}")
 
-    # TODO: Add env variable for function
     response = client.invoke(
-        FunctionName='arn:aws:lambda:us-east-1:819883234898:function:ml-scorer-function-8DxH1AHeW5x1',
+        FunctionName=scoring_service,
         InvocationType='RequestResponse',
         Payload=json.dumps(input_flight.to_dict())
     )

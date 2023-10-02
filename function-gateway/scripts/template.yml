@@ -19,6 +19,10 @@ Resources:
       Tracing: Active
       Layers:
         - !Ref libs
+      Environment:
+        Variables:
+          SCORING_LAMBDA: !Ref ScoringLambdaARN
+          PHASE: !Ref Phase
   libs:
     Type: AWS::Serverless::LayerVersion
     Properties:
@@ -27,3 +31,8 @@ Resources:
       ContentUri: ../package/.
       CompatibleRuntimes:
         - python3.8
+Parameters:
+  ScoringLambdaARN:
+    Type: String
+  Phase:
+    Type: String
