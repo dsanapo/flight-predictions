@@ -1,5 +1,4 @@
 # mypy: disable-error-code="attr-defined"
-
 import logging
 from . import flight
 from . import predictor

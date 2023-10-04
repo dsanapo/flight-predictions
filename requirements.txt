@@ -1,3 +1,4 @@
+azure-functions
 jsonpickle==3.0.2
 dataclasses-json==0.6.1
 requests==2.31.0
