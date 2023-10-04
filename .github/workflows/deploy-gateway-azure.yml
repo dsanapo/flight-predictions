@@ -29,6 +29,7 @@ jobs:
         run: |
           cp function-gateway/src/*.py function-gateway/
           cp function-scorer/src/*.py function-scorer/
+          sed -i '' 's/from flight import Flight/from .flight import Flight/g' function-scorer/predictor.py
       - name: 'Resolve Project Dependencies Using Pip'
         shell: bash
         run: |
