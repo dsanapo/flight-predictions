@@ -1,9 +1,8 @@
 name: Deploy Gateway and Scorer Functions to Azure
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 env:
   AZURE_FUNCTIONAPP_NAME: 'flightprediction'
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'
