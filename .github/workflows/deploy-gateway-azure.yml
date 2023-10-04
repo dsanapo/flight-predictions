@@ -1,4 +1,4 @@
-name: Deploy Gateway Function to Azure
+name: Deploy Gateway and Scorer Functions to Azure
 on:
   push:
     branches: [ "main" ]
@@ -26,6 +26,7 @@ jobs:
       - name: 'Copy python files'
         run: |
           cp function-gateway/src/*.py function-gateway/
+          cp function-scorer/src/*.py function-scorer/
       - name: 'Resolve Project Dependencies Using Pip'
         shell: bash
         run: |
