@@ -6,9 +6,14 @@ It is made up of 2 functions:
 
 Both functions can be deployed in AWS as Lambda and Azure as FunctionApp.
 
-## Build status
-* Prediction Gateway [![Build Gateway Function](https://github.com/dsanapo/flight-predictions/actions/workflows/build-gateway.yml/badge.svg?branch=main)](https://github.com/dsanapo/flight-predictions/actions/workflows/build-gateway.yml) [![Deploy Gateway Function to AWS](https://github.com/dsanapo/flight-predictions/actions/workflows/deploy-gateway.yml/badge.svg?branch=main)](https://github.com/dsanapo/flight-predictions/actions/workflows/deploy-gateway.yml) 
-* Prediction Scorer [![Build Scorer Function](https://github.com/dsanapo/flight-predictions/actions/workflows/build-scorer.yml/badge.svg?branch=main)](https://github.com/dsanapo/flight-predictions/actions/workflows/build-scorer.yml) [![Deploy Scorer Function to AWS](https://github.com/dsanapo/flight-predictions/actions/workflows/deploy-scorer.yml/badge.svg?branch=main)](https://github.com/dsanapo/flight-predictions/actions/workflows/deploy-scorer.yml) 
+## Status
+
+### Build
+* Prediction Gateway [![Build Gateway Function](https://github.com/dsanapo/flight-predictions/actions/workflows/build-gateway.yml/badge.svg?branch=main)](https://github.com/dsanapo/flight-predictions/actions/workflows/build-gateway.yml)
+* Prediction Scorer [![Build Scorer Function](https://github.com/dsanapo/flight-predictions/actions/workflows/build-scorer.yml/badge.svg?branch=main)](https://github.com/dsanapo/flight-predictions/actions/workflows/build-scorer.yml)
+### Deployment
+* Prediction Gateway to AWS [![Deploy Gateway Function to AWS](https://github.com/dsanapo/flight-predictions/actions/workflows/deploy-gateway.yml/badge.svg?branch=main)](https://github.com/dsanapo/flight-predictions/actions/workflows/deploy-gateway.yml)
+* Prediction Scorer to AWS [![Deploy Scorer Function to AWS](https://github.com/dsanapo/flight-predictions/actions/workflows/deploy-scorer.yml/badge.svg?branch=main)](https://github.com/dsanapo/flight-predictions/actions/workflows/deploy-scorer.yml)
 * Deployment to Azure [![Deploy Gateway and Scorer Functions to Azure](https://github.com/dsanapo/flight-predictions/actions/workflows/deploy-gateway-azure.yml/badge.svg?branch=main)](https://github.com/dsanapo/flight-predictions/actions/workflows/deploy-gateway-azure.yml)
 
 ## Local development
